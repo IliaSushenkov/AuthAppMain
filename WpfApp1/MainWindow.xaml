@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Users App" Height="400" Width="500">
+    <Grid Background="LightGray">
+        <Border MinWidth="400" MaxWidth="550" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Registration" FontSize="30" FontWeight="DemiBold" Margin="0 0  0 20"/>
+              
+                <TextBox x:Name="textBoxEmail" materialDesign:HintAssist.Hint="Write Email" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="textBoxLogin" materialDesign:HintAssist.Hint="Write Login" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                
+                <PasswordBox x:Name="passBox" materialDesign:HintAssist.Hint="Write password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="passBox_2" materialDesign:HintAssist.Hint="Repeat password" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                
+                <Button Content="Register" Margin="0 20" Click="Button_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
